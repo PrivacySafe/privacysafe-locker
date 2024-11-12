@@ -1,27 +1,24 @@
-![Logo](https://avatars2.githubusercontent.com/u/12774718?s=150)
+![Logo](https://privacysafe.locker/img/privacysafe_locker_logo.svg)
 
-Up1: A Client-side Encrypted Image Host
+PrivacySafe Locker &ndash; Private Files &amp; Memos
 ===
 
-Up1 is a simple host that client-side encrypts images, text, and other data, and stores them, with the server knowing nothing about the contents.
-It has the ability to view images, text with syntax highlighting, short videos, and arbitrary binaries as downloadables.
+PrivacySafe Locker is a fork of [Up1](https://github.com/Upload/Up1) with some additional changes on the server to treat the app more like a temporary locker that self-destructs. The PrivacySafe Locker application has zero knowledge of the contents of a locker (aka the encrypted file or memo) and uses client-side cryptography to encrypt images, text, and other data. The server software and server administrators cannot read the contents of any files created by end-users, and these encrypted blobs are what we call a "locker". The app can load a variety of files on the client-side for viewing by the recipient of a PrivacySafe Locker URL, such as images, text with syntax highlighting, and short videos. The creator of the PrivacySafe Locker can easily delete the locker after they have confirmed receipt of the contents with their intended recipient, or they can wait a short amount of time (6 hours by default) and the locker will self-destruct.
 
-Public Server
+Free Public Server
 ---
-There was a public, free to use server at https://up1.ca.  
-This demo instance is no longer available or being maintained. However, there are several public hosts which use Up1. An online search should turn up some results.
+Browse to https://privacysafe.locker to try this software for free. Files on that instance are deleted every 6 hours and filesize limit is 12MB
 
 #### Client Utilities:
 * [upclient](https://github.com/Upload/upclient), a command-line tool for uploading to Up1 servers
-* ~~ShareX~~, unfortunately, the Up1 support in ShareX has been removed since shutting down the Up1 demo server.
 
 Quick start
 ---
 To install and run the server with default settings:
 
     apt install nodejs
-    git clone https://github.com/Upload/Up1
-    cd Up1
+    git clone https://github.com/seandiggity/privacysafe-locker/
+    cd privacysafe-locker
     cp server/server.conf.example server/server.conf
     cp client/config.js.example client/config.js
     cd server
@@ -88,7 +85,7 @@ Any contributions, whether to our existing code or as separate applications, are
 
 We don't ask for any CLAs - you don't have to give up copyright on your code - however we prefer that you contribute under the MIT license, just for consistency.
 
-If you find serious security issues, please email us at `security@up1.ca`.
+If you find serious security issues, please email us at `security@privacysafe.net`.
 
 Thank you for you contributions!
 
