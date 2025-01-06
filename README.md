@@ -7,7 +7,7 @@ PrivacySafe Locker is a fork of [Up1](https://github.com/Upload/Up1) with some a
 
 Free Public Server
 ---
-Browse to https://privacysafe.locker to try this software for free. Files on that instance are deleted every 6 hours and filesize limit is 12MB
+Browse to https://privacysafe.locker to try this software for free. Files on that instance are deleted every 24 hours and filesize limit is 15MB
 
 #### Client Utilities:
 * [upclient](https://github.com/Upload/upclient), a command-line tool for uploading to Up1 servers
