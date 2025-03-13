@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://privacysafe.locker">
-    <img src="img/privacysafe_locker_logo.svg" width="300" height="300" />
+    <img src="client/img/privacysafe_locker_logo.svg" width="300" height="300" />
   </a>
   
   # PrivacySafe Locker &ndash; Private Files &amp; Memos
