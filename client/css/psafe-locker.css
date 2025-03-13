@@ -1,0 +1,490 @@
+@font-face {
+    font-family: "Ubuntu", "Lucida Sans Unicode", "Lucida Grande", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: local('Ubuntu'), url(./fonts/ubuntu-regular-webfont.woff) format('woff');
+}
+
+#btnarea {
+    bottom: 5px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+#btnarea .right {
+    margin-right: 5px;
+}
+
+#create_filename {
+    background-color: rgba(0,0,0,.5);
+    border: 1px solid #FFF;
+    border-bottom-right-radius: initial;
+    box-sizing: border-box;
+    color: #FFF;
+    font-size: 13px;
+    left: 10px;
+    margin: 0;
+    max-width: 100%;
+    opacity: .75;
+    overflow: hidden;
+    padding: 5px;
+    position: fixed;
+    top: 10px;
+    white-space: nowrap;
+    width: 170px;
+    z-index: 1;
+}
+
+#downloaded_filename {
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #FFF;
+    display: block;
+    height: 40px;
+    line-height: 30px;
+    margin: 0;
+    opacity: .75;
+    overflow: hidden;
+    padding: 5px;
+    text-align: middle;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+#finallink,#downloadprogress {
+    color: #FFF;
+}
+
+#create_linenos {
+    color: #C5C8C6;
+    float: left;
+    /*font-family: monospace;*/
+    font-family: "Ubuntu", "Lucida Sans Unicode", "Lucida Grande", "Arial", sans-serif;
+    left: 5px;
+    overflow: hidden;
+    position: absolute;
+    text-align: right;
+    top: 6.5px;
+    width: 30px;
+    z-index: -1;
+}
+
+.line {
+    word-wrap: normal;
+    white-space: pre-wrap;
+    min-height: 1em;
+}
+
+.line:after {
+        content: "";
+}
+
+.line .linenum {
+    -webkit-user-select: none;    /* Chrome all / Safari all */
+    -moz-user-select: none;         /* Firefox all */
+    -ms-user-select: none;            /* IE 10+ */
+    user-select: none;                    /* Likely future */
+    color: #C5C8C6;
+    /*font-family: monospace;*/
+    font-family: "Ubuntu", "Lucida Sans Unicode", "Lucida Grande", "Arial", sans-serif;
+    padding: 0 15px 0 10px;
+    text-align: center;
+    position: absolute;
+    left: -8px;
+    text-align: right;
+    width: 30px;
+}
+
+#module_download .preview {
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#module_download,#downloaddetails {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#pastearea {
+    cursor: pointer;
+}
+
+#pastearea.dragover {
+    background-color: rgba(255,255,255,.2);
+}
+
+#pastearea:hover {
+    -moz-transition: background-color 100ms ease-in;
+    -ms-transition: background-color 100ms ease-in;
+    -o-transition: background-color 100ms ease-in;
+    -webkit-transition: background-color 100ms ease-in;
+    background-color: #102136;
+    transition: background-color 100ms ease-in;
+}
+
+#pastecatcher {
+    height: 0;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+
+#previewimg {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#previewimg img, .preview video, .preview audio {
+    display: block;
+    margin: 0 auto;
+}
+
+#previewimg img:not(.dragged), .preview audio, .preview video {
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+#progressamountbg {
+    background-color: rgba(0,10,0,.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+    z-index: -1;
+}
+
+#uploadview .centerview {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.boxarea {
+    -moz-transition: background-color 400ms ease-out;
+    -ms-transition: background-color 400ms ease-out;
+    -o-transition: background-color 400ms ease-out;
+    -webkit-transition: background-color 400ms ease-out;
+    transition: background-color 400ms ease-out;
+}
+
+.btn {
+    -webkit-box-align: start;
+    background-color: rgba(0,0,0,.5);
+    border: 2px solid #FFF;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    font-size: 13px;
+    height: 40px;
+    line-height: 16px;
+    margin: 0 0 0 5px;
+    opacity: .75;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 400ms ease-out;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.btn:hover {
+    background-color: #102136;
+    opacity: 1;
+    transition: all 100ms ease-in;
+}
+
+.contentarea {
+    border: 2px solid #FFF;
+    bottom: 0;
+    color: #FFF;
+    height: 200px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    vertical-align: middle;
+    width: 200px;
+}
+
+.contentarea .boxarea {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.contentarea h1 {
+    margin: 0;
+}
+
+.downloadexplain {
+    color: #fff;
+    font-size: 30px;
+}
+
+.dragresize.dragging {
+    cursor: nwse-resize;
+}
+
+.footer {
+    bottom: 10px;
+    margin: auto;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    color: #FFF;
+}
+
+.footer a {
+    color: #FFF;
+    font-size: 13px;
+    opacity: .5;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.loadingtext {
+    color: #FFF;
+    text-align: center;
+}
+
+.noscript {
+    color: #FFF;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.previewtext {
+    height: calc(100% - 110px);
+    overflow: auto;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+}
+
+.previewtext > textarea {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    box-sizing: border-box;
+    color: #C5C8C6!important;
+    /*font-family: monospace!important;*/
+    font-family: "Ubuntu", "Lucida Sans Unicode", "Lucida Grande", "Arial", sans-serif;
+    font-size: 13px;
+    height: calc(100% - 5px);
+    margin: 0;
+    outline: medium none;
+    padding: 6.5px 0 0 50px;
+    position: absolute;
+    resize: none;
+    width: 100%;
+}
+
+.previewtext code {
+    background: none;
+    margin: 0;
+    overflow: visible;
+}
+
+.previewtext pre {
+    margin: 0;
+
+    padding-left: 50px;
+}
+
+.topbar {
+    box-sizing: border-box;
+    display: flex;
+    height: 40px;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.viewcontent {
+    height: 100%;
+    width: 100%;
+}
+
+.viewswitcher {
+    -webkit-flex-shrink: 0;
+    display: flex;
+    flex-shrink: 0;
+    margin-left: auto;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.centertext {
+    text-align: center;
+}
+
+.centerable {
+    -webkit-transform: translateY(-50%);
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+body {
+    background-color: #1d1f21;
+    overflow: auto;
+}
+
+body,html {
+    /*font-family: Sans-Serif;*/
+    font-family: "Ubuntu", "Lucida Sans Unicode", "Lucida Grande", "Arial", sans-serif;
+    height: 100%;
+    margin: 0;
+    overflow: auto;
+    padding: 0;
+}
+
+.right {
+    float: right;
+}
+
+/* top line > pointer in memo/paste view */
+#create_linenos {
+color: #fff;
+}
+
+/* textarea for memo/paste */
+.previewtext > textarea, .preview .previewtext, #downloaded_text {
+background: rgba(33,62,109,.6);
+color: #eee;
+font-size: 1.3em;
+}
+
+/* memo/paste text after saving */
+#downloaded_text .line {
+font-size: 1.3em;
+line-height: 1.6em;
+color: #eee;
+}
+
+
+/* memo/paste line numbers after saving */
+#downloaded_text .linenum {
+font-size: .6em;
+line-spacing: 4px;
+color: #37BBFF; /* blue */
+}
+
+/* "Untitled-Memo.txt" filename before save */
+#create_filename {
+color: #FF7237; /* orange */
+text-align: center;
+font-size: 1.1em;
+font-weight: 500;
+}
+
+/* filename after save */
+#downloaded_filename {
+color: #FF7237; /* orange */
+}
+
+/* "Edit Memo" button */
+#editpaste.btn {
+color: #37BBFF; /* blue */
+font-weight: 500;
+border: 2px solid #37BBFF; /* blue */
+}
+
+/* "New Locker" button */
+#newupload.btn {
+color: #5EFF7F; /* green */
+font-weight: 500;
+border: 2px solid #5EFF7F; /* green */
+}
+
+/* "Download" button */
+#dlbtn.btn {
+color: #5EFF7F; /* green */
+font-weight: 500;
+border: 2px solid #5EFF7F; /* green */
+}
+
+/* "Write a Memo" button */
+#newpaste.btn {
+color: #5EFF7F; /* green */
+font-weight: 500;
+border: 2px solid #5EFF7F; /* green */
+}
+
+/* "Save Memo" button */
+#newpaste.btn {
+color: #5EFF7F; /* green */
+font-weight: 500;
+border: 2px solid #5EFF7F; /* green */
+}
+
+/* "View in Browser" button */
+#inbrowserbtn.btn {
+color: #37BBFF; /* blue */
+font-weight: 500;
+border: 2px solid #37BBFF; /* blue */
+}
+
+/* "Delete" button */
+#deletebtn.btn {
+color: #FF7237; /* orange */
+font-weight: 500;
+border: 2px solid #FF7237; /* orange */
+}
+
+/* "Save Memo" button */
+.viewswitcher button.btn {
+color: #5EFF7F; /* green */
+font-weight: 500;
+border: 2px solid #5EFF7F; /* green */
+}
+
+/* "Go Back" button */
+#retbtn.btn {
+color: #37BBFF; /* blue */
+font-weight: 500;
+border: 2px solid #37BBFF; /* blue */
+}
+
+/* Download text */
+#downloadprogress {
+color: #FF7237; /* orange */
+}
+
+/* outer upload box border */
+#uploadview {
+border: 2px dashed #FF7237; /* orange */
+}
+
+/* "Add Your File" area */
+#uploadview, #pastearea.boxarea, #pastearea.boxarea h2 {
+color: #FF7237; /* orange */
+font-weight: 500;
+}
+
+/* "Add Your File" area */
+#pastearea.boxarea h3 {
+color: #FF7237; /* orange */
+font-weight: 500;
+}
+
