@@ -1,0 +1,29 @@
+{
+  "api_key": "b24040b5aaecd0509200af936e278110",
+  "delete_key": "",
+  "maximum_file_size": 26000000,
+
+  "path": {
+    "i": "../i",
+    "client": "../client"
+  },
+
+  "http": {
+    "enabled": true,
+    "listen": ":8080"
+  },
+
+  "https": {
+    "enabled": false,
+    "listen": ":443",
+    "cert": "/etc/letsencrypt/live/example.com/fullchain.pem",
+    "key": "/etc/letsencrypt/live/example.com/privkey.pem"
+  },
+
+  "cloudflare-cache-invalidate": {
+    "enabled": false,
+    "token": "Cloudflare API token here",
+    "email": "Cloudflare login email here",
+    "domain": "Domain to invalidate cache on"
+  }
+}

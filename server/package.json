@@ -1,0 +1,22 @@
+{
+  "name": "psafe-locker",
+  "version": "0.3.1",
+  "description": "Private Files & Memos with Zero Knowledge Server + Strong Client-Side Encryption",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PrivacySafe/privacysafe-locker"
+  },
+  "author": "PrivacySafe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PrivacySafe/privacysafe-locker"
+  },
+  "dependencies": {
+    "busboy": "^0.2.12",
+    "express": "^4.21.2",
+    "multer": "^1.1.0",
+    "request": "~2.69.0",
+    "tmp": "0.0.28"
+  }
+}
